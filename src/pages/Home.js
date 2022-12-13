@@ -18,6 +18,7 @@ const Home = () => {
 
         <ResortList />
       </Container>
+      <div className={classes.spacer} />
     </div>
   );
 };
