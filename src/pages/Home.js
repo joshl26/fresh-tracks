@@ -6,16 +6,16 @@ import ResortList from "../components/ResortList";
 const Home = () => {
   return (
     <div className={classes.home}>
+      {" "}
+      <div className={classes.spacer} />
+      <Container className={classes.header_card}>
+        <h1 className={classes.header_text}>
+          Welcome to FreshTracks! Your personal App designed specifically for
+          Ski and Snowboard lifestyle enthusiasts.
+        </h1>
+      </Container>{" "}
+      <div className={classes.spacer} />
       <Container>
-        <div className={classes.spacer} />
-        <div className={classes.header_card}>
-          <h1 className={classes.header_text}>
-            Welcome to FreshTracks! Your personal App designed specifically for
-            Ski and Snowboard lifestyle enthusiasts.
-          </h1>
-        </div>
-        <div className={classes.spacer} />
-
         <ResortList />
       </Container>
       <div className={classes.spacer} />

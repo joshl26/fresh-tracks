@@ -64,11 +64,14 @@ const ResortList = () => {
   return (
     <Container>
       <div className={classes.resortlist_card}>
+        <div className={classes.spacer} />
         <h1>Current Top 5 North American Resorts</h1>
         <p>
           (as currently ranked by google trends API - last updated DEC. XX/XXXX
           @ XX:XXPM)
         </p>
+        <div className={classes.spacer} />
+
         {DUMMY_DATA.map((resort, idx) => (
           <>
             <ResortCard

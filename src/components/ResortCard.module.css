@@ -1,6 +1,8 @@
 .resort_card {
-  width: 60vw;
   background-color: var(--quaternary-color);
+  border-radius: 20px;
+  width: 50vw;
+  margin: 0 auto;
 }
 
 .spacer {

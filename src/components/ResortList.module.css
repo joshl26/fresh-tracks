@@ -1,5 +1,10 @@
 .resortlist_card {
   background-color: RGBA(72, 159, 181, 0.8);
-  border-radius: 10px;
+  border-radius: 30px;
   color: white;
+  opacity: 0.95;
+}
+
+.spacer {
+  height: 5vh;
 }

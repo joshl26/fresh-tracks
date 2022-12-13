@@ -11,9 +11,8 @@
 
 .header_card {
   padding: 5vh;
-  background-color: RGBA(72, 159, 181, 0.8);
-  height: 200px;
-  border-radius: 10px;
+  background-color: RGBA(72, 159, 181, 0.9);
+  border-radius: 30px;
 }
 
 .spacer {
