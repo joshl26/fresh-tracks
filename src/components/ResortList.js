@@ -39,9 +39,25 @@ const ResortList = () => {
     },
     {
       id: 4,
+      region: "USA - Idaho",
+      name: "Kelly Canyon Ski Area",
+      url: "https://www.snow-forecast.com/resorts/Kelly-Canyon-Ski-Area/6day/top",
+      topLiftElevation: "6601ft",
+      midLiftElevation: "6103ft",
+      botLiftElevation: "5601ft",
+      lat: "-111.63",
+      lon: "43.65",
     },
     {
       id: 5,
+      region: "Canada - BC",
+      name: "Whistler Blackcomb",
+      url: "https://www.snow-forecast.com/resorts/Whistler-Blackcomb/6day/top",
+      topLiftElevation: "7494ft",
+      midLiftElevation: "4856ft",
+      botLiftElevation: "2215ft",
+      lat: "-122.95",
+      lon: "50.11",
     },
   ];
 
@@ -55,7 +71,16 @@ const ResortList = () => {
         </p>
         {DUMMY_DATA.map((resort, idx) => (
           <>
-            <ResortCard key={`${idx}_${resort.id}`} id={resort.id} />
+            <ResortCard
+              key={`${idx}_${resort.id}`}
+              id={resort.id}
+              region={resort.region}
+              name={resort.name}
+              url={resort.url}
+              elevation={resort.topLiftElevation}
+              lat={resort.lat}
+              lon={resort.lon}
+            />
           </>
         ))}
       </div>
