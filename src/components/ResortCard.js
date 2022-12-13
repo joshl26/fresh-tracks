@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/esm/Container";
 import classes from "./ResortCard.module.css";
 
 const ResortCard = ({ key, id, region, name, url, elevation, lat, lon }) => {
