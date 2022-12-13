@@ -1,5 +1,14 @@
+:root {
+  --primary-color: rgb(22, 105, 122);
+  --secondary-color: rgb(72, 159, 181);
+  --tertiary-color: rgb(130, 192, 204);
+  --quaternary-color: rgb(237, 231, 227);
+  --quinary-color: rgb(255, 166, 43);
+}
+
 .App {
   text-align: center;
+  background-color: var(--tertiary-color);
 }
 
 .App-logo {

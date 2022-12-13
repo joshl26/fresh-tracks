@@ -9,7 +9,7 @@ import classes from "./Header.module.css";
 const Header = () => {
   return (
     <>
-      <Navbar sticky="top" bg="primary" variant="dark">
+      <Navbar className={classes.nav_bar} sticky="top" bg="" variant="dark">
         <Container>
           <Navbar.Brand href="#home">FreshTracks</Navbar.Brand>
           <Nav className="me-auto">

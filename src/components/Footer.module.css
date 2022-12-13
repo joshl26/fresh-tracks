@@ -1,0 +1,9 @@
+.footer {
+  background-color: var(--secondary-color);
+  height: 8vh;
+}
+
+.footer_text {
+  padding: 10px;
+  font-size: large;
+}

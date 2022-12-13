@@ -5,3 +5,18 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.header_text {
+  color: var(--quinary-color);
+}
+
+.header_card {
+  padding: 5vh;
+  background-color: RGBA(72, 159, 181, 0.8);
+  height: 200px;
+  border-radius: 10px;
+}
+
+.spacer {
+  height: 8vh;
+}
