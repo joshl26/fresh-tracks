@@ -6,4 +6,10 @@
 .footer_text {
   padding: 10px;
   font-size: large;
+  color: var(--quinary-color);
+}
+
+.footer_link {
+  color: var(--quinary-color);
+  text-decoration: none;
 }

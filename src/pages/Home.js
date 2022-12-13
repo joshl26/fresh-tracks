@@ -1,6 +1,8 @@
 import Container from "react-bootstrap/esm/Container";
 import classes from "./Home.module.css";
 
+import ResortList from "../components/ResortList";
+
 const Home = () => {
   return (
     <div className={classes.home}>
@@ -12,6 +14,9 @@ const Home = () => {
             Ski and Snowboard lifestyle enthusiasts.
           </h1>
         </div>
+        <div className={classes.spacer} />
+
+        <ResortList />
       </Container>
     </div>
   );

@@ -1,0 +1,13 @@
+.resort_card {
+  height: 10vh;
+  width: 60vw;
+  background-color: var(--quaternary-color);
+}
+
+.spacer {
+  height: 5vh;
+}
+
+.resort_headertext {
+  color: var(--primary-color);
+}
