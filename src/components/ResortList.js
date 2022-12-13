@@ -2,13 +2,25 @@ import Container from "react-bootstrap/esm/Container";
 import ResortCard from "./ResortCard";
 import classes from "./ResortList.module.css";
 
-// DUMMY_DATA = [
-//   {
-
-//   }
-// ]
-
 const ResortList = () => {
+  const DUMMY_DATA = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+    {
+      id: 1,
+    },
+    {
+      id: 4,
+    },
+  ];
+
   return (
     <Container>
       <div className={classes.resortlist_card}>
@@ -17,11 +29,9 @@ const ResortList = () => {
           (as currently ranked by google trends API - last updated DEC. XX/XXXX
           @ XX:XXPM)
         </p>
-        <ResortCard />
-        <ResortCard />
-        <ResortCard />
-        <ResortCard />
-        <ResortCard />
+        {DUMMY_DATA.map((resort, idx) => (
+          <ResortCard key={idx} id={resort.id} />
+        ))}
       </div>
     </Container>
   );
