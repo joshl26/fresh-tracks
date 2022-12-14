@@ -1,6 +1,6 @@
 import classes from "./ResortCard.module.css";
 
-const ResortCard = ({ key, id, region, name, url, elevation, lat, lon }) => {
+const ResortCard = ({ id, region, name, url, elevation, lat, lon }) => {
   return (
     <>
       <div className={classes.resort_card}>

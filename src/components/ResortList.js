@@ -73,18 +73,16 @@ const ResortList = () => {
         <div className={classes.spacer} />
 
         {DUMMY_DATA.map((resort, idx) => (
-          <>
-            <ResortCard
-              key={`${idx}_${resort.id}`}
-              id={resort.id}
-              region={resort.region}
-              name={resort.name}
-              url={resort.url}
-              elevation={resort.topLiftElevation}
-              lat={resort.lat}
-              lon={resort.lon}
-            />
-          </>
+          <ResortCard
+            key={`${idx}_${resort.id}`}
+            id={resort.id}
+            region={resort.region}
+            name={resort.name}
+            url={resort.url}
+            elevation={resort.topLiftElevation}
+            lat={resort.lat}
+            lon={resort.lon}
+          />
         ))}
       </div>
     </Container>
