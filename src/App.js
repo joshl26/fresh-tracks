@@ -5,8 +5,8 @@ import { useEffect } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import TestAPI from "./components/TestAPI";
-import GoogleTrendsAPI from "./components/GoogleTrendsAPI";
+// import TestAPI from "./components/TestAPI";
+// import GoogleTrendsAPI from "./components/GoogleTrendsAPI";
 
 import "./App.css";
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       {/* <TestAPI /> */}
-      <GoogleTrendsAPI />
+      {/* <GoogleTrendsAPI /> */}
       <Header />
       <Switch>
         <Route path="/" exact>
