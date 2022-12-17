@@ -5,8 +5,8 @@ import { useEffect } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-// import TestAPI from "./components/TestAPI";
 import GoogleTrendsAPI from "./components/GoogleTrendsAPI";
+import StarWarsAPI from "./components/StarWarsAPI";
 
 import "./App.css";
 
@@ -23,9 +23,8 @@ function App() {
           <Home />
         </Route>
       </Switch>
-      {/* <TestAPI /> */}
+      <StarWarsAPI />
       <GoogleTrendsAPI />
-
       <Footer />
     </div>
   );
