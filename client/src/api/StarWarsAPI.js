@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const GoogleTrendsAPI = () => {
+const StarWarsAPI = () => {
   const [people, setPeople] = useState([]);
   const [error, setError] = useState("");
 
@@ -43,4 +43,4 @@ const GoogleTrendsAPI = () => {
   //   });
 };
 
-export default GoogleTrendsAPI;
+export default StarWarsAPI;
