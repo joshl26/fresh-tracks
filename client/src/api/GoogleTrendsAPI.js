@@ -12,30 +12,36 @@ const GoogleTrendsAPI = () => {
     fetch("http://localhost:8000/api2")
       .then((response) => response.json())
       .then((data) => {
-        console.log("Google Trend State: ");
-        console.log(googleTrendsState);
         if (data.length > 0) {
           dispatch(setGoogleTrends(data));
-
-          console.log("Google Trends State: ");
-
-          console.log(googleTrendsState);
         }
       })
       .catch((e) => {
         console.log();
       });
+  }, [dispatch]);
+
+  useEffect(() => {
+    console.log("Google Trend State: ");
+    console.log(googleTrendsState);
   }, []);
 
   return (
     <div className="App">
-      {googleTrendsState.map((resort, idx) => {
-        return (
-          <div className="post-card" key={idx}>
-            {resort.topic.title}
-          </div>
-        );
-      })}
+      {googleTrendsState.length > 0 ? (
+        <>
+          {googleTrendsState.map((resort, idx) => {
+            return (
+              <div className="post-card" key={idx}>
+                <div>{resort.topic.title}</div>
+                <div>{resort.topic.type}</div>
+              </div>
+            );
+          })}
+        </>
+      ) : (
+        <div>Loading top 5 resorts...</div>
+      )}
     </div>
   );
 };

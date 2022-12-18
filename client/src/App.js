@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import GoogleTrendsAPI from "./api/GoogleTrendsAPI";
+import SkiHillAPI from "./api/SkiHillAPI";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         </Route>
       </Switch>
       <GoogleTrendsAPI />
+      <SkiHillAPI />
       <Footer />
     </div>
   );
