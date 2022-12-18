@@ -14,6 +14,7 @@ export const settingsSlice = createSlice({
     cycle: [1, 2, 1, 2, 1, 2, 1, 2, 3],
     counter: 0,
     cyclecomplete: false,
+    googleTrends: [],
   },
   reducers: {
     pomoIncrement: (state) => {
@@ -196,6 +197,11 @@ export const settingsSlice = createSlice({
       console.log("Set Cycle Complete: " + action.payload);
       state.cyclecomplete = action.payload;
     },
+    setGoogleTrends: (state, action) => {
+      console.log("Set Google Trends: ");
+      console.log(action.payload);
+      state.googleTrends = action.payload;
+    },
   },
 });
 
@@ -224,6 +230,7 @@ export const {
   setCycleComplete,
   setCycleStart,
   setCycle,
+  setGoogleTrends,
 } = settingsSlice.actions;
 
 export default settingsSlice.reducer;

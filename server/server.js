@@ -24,7 +24,7 @@ app.get("/api2", async (req, res) => {
 
           var testString = spec.rankedKeyword[i].topic.type;
 
-          while (testString.includes("Ski resort") && result.length < 5) {
+          if (testString.includes("Ski resort") && result.length < 5) {
             result.push(spec.rankedKeyword[i]);
           }
         }
