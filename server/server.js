@@ -8,10 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+var result = [];
+
 app.get("/api2", async (req, res) => {
   try {
-    var result = [];
-
     await googleTrends
       .relatedTopics({ keyword: "/m/018jqx", geo: "CA" })
       .then(function (results) {
@@ -24,7 +24,7 @@ app.get("/api2", async (req, res) => {
 
           var testString = spec.rankedKeyword[i].topic.type;
 
-          if (testString.includes("Ski resort") && result.length < 5) {
+          while (testString.includes("Ski resort") && result.length < 5) {
             result.push(spec.rankedKeyword[i]);
           }
         }
@@ -35,9 +35,8 @@ app.get("/api2", async (req, res) => {
         //         for (var i = 0; i < 5; i++) {
         //             result2.push(arr1[i].title)
         //         }
-        res.json(result);
       });
-
+    res.json(result);
     // const data = await axios.get("https://swapi.dev/api/people/");
     // setResorts(data.data?.results);
   } catch (e) {
