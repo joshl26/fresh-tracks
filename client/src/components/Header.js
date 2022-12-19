@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 import classes from "./Header.module.css";
 
@@ -11,10 +12,14 @@ const Header = () => {
     <>
       <Navbar className={classes.nav_bar} sticky="top" bg="" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">FreshTracks</Navbar.Brand>
+          <Navbar.Brand>FreshTracks</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#pricing">Login</Nav.Link>
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/Login">
+              Login
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

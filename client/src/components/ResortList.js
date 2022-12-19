@@ -25,7 +25,7 @@ const ResortList = () => {
   useEffect(() => {
     console.log(googleTrendsState);
     console.log(trendingResortDataState);
-  }, [googleTrendsState]);
+  }, [googleTrendsState, trendingResortDataState]);
 
   const DUMMY_DATA = [
     {
@@ -90,18 +90,23 @@ const ResortList = () => {
       <div className={classes.resortlist_card}>
         <div className={classes.spacer} />
         <h1>Current Top 5 North American Resorts</h1>
-        <p>
-          as currently ranked by google trends API - last updated {fullDate} @{" "}
-          {fullTime}
-        </p>
+        {googleTrendsState ? (
+          <p>
+            as currently ranked by google trends API - last updated {fullDate} @{" "}
+            {fullTime}
+          </p>
+        ) : (
+          <></>
+        )}
+
         <div className={classes.spacer} />
 
         {googleTrendsState ? (
           <></>
         ) : (
           <div>
-            <h1>Google Trend API Not Working...</h1>
-            <h1>DUMMY_DATA BELOW USED</h1>
+            <h1>Google Trend API Not Currently Working...</h1>
+            <h1>BACKUP DUMMY_DATA USED INSTEAD</h1>
             <div className={classes.spacer} />
           </div>
         )}

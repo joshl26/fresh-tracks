@@ -31,7 +31,7 @@ const SkiHillAPI = () => {
         .then((response) => dispatch(setTrendingResortData(response)))
         .catch((err) => console.error(err));
     }
-  }, [googleTrendsState]);
+  }, [googleTrendsState, dispatch]);
 };
 
 export default SkiHillAPI;
