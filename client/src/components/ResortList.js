@@ -96,6 +96,15 @@ const ResortList = () => {
         </p>
         <div className={classes.spacer} />
 
+        {googleTrendsState ? (
+          <></>
+        ) : (
+          <div>
+            <h1>Google Trend API Not Working...</h1>
+            <h1>DUMMY_DATA BELOW USED</h1>
+            <div className={classes.spacer} />
+          </div>
+        )}
         {googleTrendsState
           ? googleTrendsState.map((resort, idx) => (
               <ResortCard
