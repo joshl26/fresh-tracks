@@ -10,7 +10,8 @@ const ResortCard = ({ region, name, url, elevation, lat, lon }) => {
         <h2 className={classes.resort_headertext}>{region}</h2>
         <p className={classes.resort_headertext}>{elevation}</p>
         <p className={classes.resort_headertext}>
-          Lat {lat} / Lon {lon}
+          {lat}
+          {lon}
         </p>
       </div>
       <div className={classes.spacer} />
