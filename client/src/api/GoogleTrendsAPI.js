@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { setGoogleTrends } from "../store/settingsSlice";
@@ -17,13 +17,13 @@ const GoogleTrendsAPI = () => {
         }
       })
       .catch((e) => {
-        console.log();
+        console.log(e);
       });
   }, [dispatch]);
 
   useEffect(() => {
-    console.log("Google Trend State: ");
-    console.log(googleTrendsState);
+    // console.log("Google Trend State: ");
+    // console.log(googleTrendsState);
   }, []);
 
   return (

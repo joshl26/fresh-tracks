@@ -17,8 +17,9 @@ function App() {
           <Home />
         </Route>
       </Switch>
-      <GoogleTrendsAPI />
       <SkiHillAPI />
+
+      <GoogleTrendsAPI />
       <Footer />
     </div>
   );

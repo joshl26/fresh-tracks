@@ -1,13 +1,15 @@
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const SkiHillAPI = () => {
   const googleTrendsState = useSelector((state) => state.settings.googleTrends);
 
   useEffect(() => {
-    console.log("Ski hill API");
-    console.log(googleTrendsState);
-  }, []);
+    if (googleTrendsState.length > 0) {
+      console.log("Ski hill API");
+      console.log(googleTrendsState);
+    }
+  }, [googleTrendsState]);
 };
 
 export default SkiHillAPI;
