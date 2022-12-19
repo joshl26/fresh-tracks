@@ -20,9 +20,7 @@ root.render(
       minBreakpoint="xxs"
     >
       <BrowserRouter>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+        <App />
       </BrowserRouter>
     </ThemeProvider>
   </Provider>

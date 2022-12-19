@@ -18,7 +18,6 @@ function App() {
         </Route>
       </Switch>
       <SkiHillAPI />
-
       <GoogleTrendsAPI />
       <Footer />
     </div>

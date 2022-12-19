@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { setGoogleTrends } from "../store/settingsSlice";
 
 const GoogleTrendsAPI = () => {
-  const googleTrendsState = useSelector((state) => state.settings.googleTrends);
+  // const googleTrendsState = useSelector((state) => state.settings.googleTrends);
 
   const dispatch = useDispatch();
 
@@ -26,24 +26,24 @@ const GoogleTrendsAPI = () => {
     // console.log(googleTrendsState);
   }, []);
 
-  return (
-    <div className="App">
-      {googleTrendsState.length > 0 ? (
-        <>
-          {googleTrendsState.map((resort, idx) => {
-            return (
-              <div className="post-card" key={idx}>
-                <div>{resort.topic.title}</div>
-                <div>{resort.topic.type}</div>
-              </div>
-            );
-          })}
-        </>
-      ) : (
-        <div>Loading top 5 resorts...</div>
-      )}
-    </div>
-  );
+  // return (
+  //   <div className="App">
+  //     {googleTrendsState.length > 0 ? (
+  //       <>
+  //         {googleTrendsState.map((resort, idx) => {
+  //           return (
+  //             <div className="post-card" key={idx}>
+  //               <div>{resort.topic.title}</div>
+  //               <div>{resort.topic.type}</div>
+  //             </div>
+  //           );
+  //         })}
+  //       </>
+  //     ) : (
+  //       <div>Loading top 5 resorts...</div>
+  //     )}
+  //   </div>
+  // );
 };
 
 export default GoogleTrendsAPI;

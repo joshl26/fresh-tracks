@@ -2,64 +2,77 @@ import Container from "react-bootstrap/esm/Container";
 import ResortCard from "./ResortCard";
 import classes from "./ResortList.module.css";
 
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+
 const ResortList = () => {
-  const DUMMY_DATA = [
-    {
-      id: 1,
-      region: "USA - Wyoming",
-      name: "Jackson Hole",
-      url: "https://www.snow-forecast.com/resorts/Jackson-Hole/6day/top",
-      topLiftElevation: "10447ft",
-      midLiftElevation: "8380ft",
-      botLiftElevation: "6309ft",
-      lat: "-110.85",
-      lon: "43.60",
-    },
-    {
-      id: 2,
-      region: "Canada - Quebec",
-      name: "Mont Tremblant",
-      url: "https://www.snow-forecast.com/resorts/Tremblant/6day/top",
-      topLiftElevation: "2871ft",
-      midLiftElevation: "1811ft",
-      botLiftElevation: "755ft",
-      lat: "-74.58",
-      lon: "46.21",
-    },
-    {
-      id: 3,
-      region: "Canada - Alberta",
-      name: "Banff Mt Norquay",
-      url: "https://www.snow-forecast.com/resorts/Banff-Norquay/6day/top",
-      topLiftElevation: "6700ft",
-      midLiftElevation: "5873ft",
-      botLiftElevation: "5049ft",
-      lat: "-115.56",
-      lon: "51.17",
-    },
-    {
-      id: 4,
-      region: "USA - Idaho",
-      name: "Kelly Canyon Ski Area",
-      url: "https://www.snow-forecast.com/resorts/Kelly-Canyon-Ski-Area/6day/top",
-      topLiftElevation: "6601ft",
-      midLiftElevation: "6103ft",
-      botLiftElevation: "5601ft",
-      lat: "-111.63",
-      lon: "43.65",
-    },
-    {
-      id: 5,
-      region: "Canada - BC",
-      name: "Whistler Blackcomb",
-      url: "https://www.snow-forecast.com/resorts/Whistler-Blackcomb/6day/top",
-      topLiftElevation: "7494ft",
-      midLiftElevation: "4856ft",
-      botLiftElevation: "2215ft",
-      lat: "-122.95",
-      lon: "50.11",
-    },
-  ];
+  const googleTrendsState = useSelector((state) => state.settings.googleTrends);
+  const trendingResortDataState = useSelector(
+    (state) => state.settings.trendingResortData
+  );
+
+  useEffect(() => {
+    console.log(trendingResortDataState.botSnowDepth);
+    console.log(googleTrendsState);
+  }, []);
+
+  // const DUMMY_DATA = [
+  //   {
+  //     id: 1,
+  //     region: "USA - Wyoming",
+  //     name: "Jackson Hole",
+  //     url: "https://www.snow-forecast.com/resorts/Jackson-Hole/6day/top",
+  //     topLiftElevation: "10447ft",
+  //     midLiftElevation: "8380ft",
+  //     botLiftElevation: "6309ft",
+  //     lat: "-110.85",
+  //     lon: "43.60",
+  //   },
+  //   {
+  //     id: 2,
+  //     region: "Canada - Quebec",
+  //     name: "Mont Tremblant",
+  //     url: "https://www.snow-forecast.com/resorts/Tremblant/6day/top",
+  //     topLiftElevation: "2871ft",
+  //     midLiftElevation: "1811ft",
+  //     botLiftElevation: "755ft",
+  //     lat: "-74.58",
+  //     lon: "46.21",
+  //   },
+  //   {
+  //     id: 3,
+  //     region: "Canada - Alberta",
+  //     name: "Banff Mt Norquay",
+  //     url: "https://www.snow-forecast.com/resorts/Banff-Norquay/6day/top",
+  //     topLiftElevation: "6700ft",
+  //     midLiftElevation: "5873ft",
+  //     botLiftElevation: "5049ft",
+  //     lat: "-115.56",
+  //     lon: "51.17",
+  //   },
+  //   {
+  //     id: 4,
+  //     region: "USA - Idaho",
+  //     name: "Kelly Canyon Ski Area",
+  //     url: "https://www.snow-forecast.com/resorts/Kelly-Canyon-Ski-Area/6day/top",
+  //     topLiftElevation: "6601ft",
+  //     midLiftElevation: "6103ft",
+  //     botLiftElevation: "5601ft",
+  //     lat: "-111.63",
+  //     lon: "43.65",
+  //   },
+  //   {
+  //     id: 5,
+  //     region: "Canada - BC",
+  //     name: "Whistler Blackcomb",
+  //     url: "https://www.snow-forecast.com/resorts/Whistler-Blackcomb/6day/top",
+  //     topLiftElevation: "7494ft",
+  //     midLiftElevation: "4856ft",
+  //     botLiftElevation: "2215ft",
+  //     lat: "-122.95",
+  //     lon: "50.11",
+  //   },
+  // ];
 
   return (
     <Container>
@@ -72,18 +85,21 @@ const ResortList = () => {
         </p>
         <div className={classes.spacer} />
 
-        {DUMMY_DATA.map((resort, idx) => (
+        {googleTrendsState.map((resort, idx) => (
           <ResortCard
-            key={`${idx}_${resort.id}`}
-            id={resort.id}
-            region={resort.region}
-            name={resort.name}
-            url={resort.url}
-            elevation={resort.topLiftElevation}
-            lat={resort.lat}
-            lon={resort.lon}
+            key={`${idx}_${resort.topic}`}
+            region={resort.topic.type}
+            name={resort.topic.title}
+            url={trendingResortDataState.basicInfo.url}
+            elevation={trendingResortDataState.basicInfo.topLiftElevation}
+            lat={trendingResortDataState.basicInfo.lat}
+            lon={trendingResortDataState.basicInfo.lon}
           />
         ))}
+
+        {/* {trendingResortDataState.map((resort, idx) => (
+          <ResortCard key={idx} elevation={resort.basicInfo.topLiftElevation} />
+        ))} */}
       </div>
     </Container>
   );

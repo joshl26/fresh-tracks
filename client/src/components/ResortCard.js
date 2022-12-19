@@ -1,6 +1,6 @@
 import classes from "./ResortCard.module.css";
 
-const ResortCard = ({ id, region, name, url, elevation, lat, lon }) => {
+const ResortCard = ({ region, name, url, elevation, lat, lon }) => {
   return (
     <>
       <div className={classes.resort_card}>
@@ -8,9 +8,9 @@ const ResortCard = ({ id, region, name, url, elevation, lat, lon }) => {
           <a href={url}>{name}</a>{" "}
         </h1>
         <h2 className={classes.resort_headertext}>{region}</h2>
-        <p className={classes.resort_headertext}>Elevation {elevation}</p>
+        <p className={classes.resort_headertext}>{elevation}</p>
         <p className={classes.resort_headertext}>
-          Location lat {lat} lon {lon}
+          Lat {lat} / Lon {lon}
         </p>
       </div>
       <div className={classes.spacer} />
