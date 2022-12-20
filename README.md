@@ -25,3 +25,5 @@ To Install:
 9). Type from the /server directory run cmd "npm start"
 
 10). Enjoy!
+
+UPDATE THIS PROJECT HAS GONE PRIVATE - WILL PROVIDE OCCASIONAL UPDATES ON YOUTUBE AND LINKEDIN. THANK YOU.
