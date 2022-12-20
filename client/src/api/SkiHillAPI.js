@@ -14,12 +14,13 @@ const SkiHillAPI = () => {
 
       // const test = googleTrendsState[0].topic.title;
 
+      //YOUR OWN KEY and YOUR OWN HOST should be replaced with your own key and host
       const options = {
         method: "GET",
         headers: {
           "X-RapidAPI-Key":
-            "0ddb5f6d07mshfdf76d31ce28704p143bacjsn648e4f6cad1c",
-          "X-RapidAPI-Host": "ski-resort-forecast.p.rapidapi.com",
+            "YOUR OWN KEY",
+          "X-RapidAPI-Host": "YOUR OWN HOST",
         },
       };
 
