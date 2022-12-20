@@ -14,7 +14,7 @@ const SkiHillAPI = () => {
 
       // const test = googleTrendsState[0].topic.title;
 
-      //YOUR OWN KEY and YOUR OWN HOST should be replaced with your own key and host
+      //Replace YOUR OWN KEY and YOUR OWN HOST with your own key and host from an API.
       const options = {
         method: "GET",
         headers: {
@@ -24,8 +24,9 @@ const SkiHillAPI = () => {
         },
       };
 
+      //Replace YOUR OWN REQUEST URL with your own request url.
       fetch(
-        "https://ski-resort-forecast.p.rapidapi.com/Blue%20Mountain%20Ski%20Resort%20Ski%20resort%20in%20Ontario,%20Canada/snowConditions?units=i",
+        "YOUR OWN REQUEST URL",
         options
       )
         .then((response) => response.json())
