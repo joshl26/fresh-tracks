@@ -20,4 +20,6 @@ To Install:
 
 8). Type from the /server directory run cmd "npm start"
 
+9). In SkiHillAPI.js use your own API keys, see note in file.
+
 9). Enjoy!
