@@ -22,4 +22,4 @@ To Install:
 
 9). In SkiHillAPI.js use your own API keys, see note in file.
 
-9). Enjoy!
+10). Enjoy!
