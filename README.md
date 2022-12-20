@@ -23,3 +23,5 @@ To Install:
 9). In SkiHillAPI.js use your own API keys, see note in file.
 
 10). Enjoy!
+
+UPDATE THIS PROJECT HAS GONE PRIVATE - WILL PROVIDE OCCASIONAL UPDATES ON YOUTUBE AND LINKEDIN. THANK YOU.
