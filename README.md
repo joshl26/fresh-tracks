@@ -1,4 +1,4 @@
-This is a repository for one my first full stack web developer projects named "FreshTracks".
+This is a repository for one of my first full stack web developer projects named "FreshTracks".
 
 FreshTracks is a React FrontEnd/Node.js BackEnd Web-App that allows skiers and snowboarders alike to find The Best Local Snow Conditions, Lodgings and Fine Food Establishments.
 
@@ -24,4 +24,4 @@ To Install:
 
 10). Enjoy!
 
-UPDATE THIS PROJECT HAS GONE PRIVATE - WILL PROVIDE OCCASIONAL UPDATES ON YOUTUBE AND LINKEDIN. THANK YOU.
+UPDATE DEC 20, 2022 - THIS PROJECT HAS GONE PRIVATE I WILL PROVIDE OCCASIONAL UPDATES ON MY YOUTUBE AND LINKEDIN PAGES. THANKS FOR THE INTEREST.
